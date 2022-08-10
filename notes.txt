@@ -1,0 +1,3 @@
+to use docker => 
+docker pull ahmedmohamedsadek/dashboard_image:latest
+docker run .....
