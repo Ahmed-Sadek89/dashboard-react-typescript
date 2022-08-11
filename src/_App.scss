@@ -1,0 +1,34 @@
+.App{
+    display: flex;
+    flex-direction: row;
+    .App-part1{
+        @include xs{
+            position: relative;
+            display: none;
+        }
+        @include md{
+            position: fixed;
+            display: block;
+        }
+        border-right: 2px solid $gray2;
+        flex: 1;
+        height: 100vh;
+        background-color: $white;
+    }
+    .App-part2{
+        height: 100vh;
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        @include xs{
+            margin-left: 0px;
+        }
+        @include md{
+            margin-left: 192px;
+        }
+        .allRoutes{
+            margin: 20px 0px;
+            
+        }
+    }
+}

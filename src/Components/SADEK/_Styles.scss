@@ -1,0 +1,13 @@
+.sadek{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    border-top: 1px solid $gray2;
+    padding: 20px 0px;
+    span{
+        color: $purple;
+        font-weight: bold;
+    }
+}

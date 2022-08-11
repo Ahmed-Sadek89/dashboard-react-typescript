@@ -1,0 +1,78 @@
+.navbar{
+    padding: 20px 0px;
+    border-bottom: 1px solid #ddd;
+    color: $gray3;
+    .navbar-content{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include xs{
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        @include md{
+            justify-content: space-between;
+            gap: 0px;
+        }
+        .navbar-part1{
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            @include xs{
+                display: none;
+            }
+            @include md{
+                display: flex;
+            }
+            input{
+                border: 1px solid $gray1;
+                padding: 10px 5px;
+                border-radius: 5px;
+            }
+            .navbar-part1-searchIcon{
+                color: $gray1;
+                position: absolute;
+                right: 0px;
+                cursor: pointer;
+            }
+        }
+        
+        .navbar-part2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            .navbar-icon{
+                cursor: pointer;
+            }
+            .navbar-lang{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                color: #555;
+                cursor: pointer;
+            }
+            .websoket{
+                position: relative;
+                cursor: pointer;
+                span{
+                    background-color: red;
+                    color: $white;
+                    padding: 1px 5px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -7px;
+                    left: 10px;
+                    font-size: 11px;
+                }
+            }
+            img{
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+}
