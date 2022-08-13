@@ -6,7 +6,12 @@
     align-items: center;
     gap: 20px;
     .widget-single{
-        flex: 1;
+        @include xs{
+            flex: auto
+        }
+        @include xl{
+            flex: 1
+        }
         box-shadow: 1px 4px 12px -2px rgba(221,221,221,0.63);
         border-radius: 20px;
         padding: 20px;
@@ -14,7 +19,7 @@
             display: flex;
             justify-content: space-between;
             flex-direction: row;
-            flex-wrap: wrap;
+            gap: 10px;
             align-items: center;
         }
         .wedget-single-line1{
@@ -22,6 +27,7 @@
                 color: $gray1;
                 text-transform: uppercase;
                 font-weight: bold;
+                white-space: nowrap;
             }
             p:nth-child(2){
                 color: green;
@@ -30,6 +36,7 @@
                 flex-direction: row;
                 align-items: center;
                 flex-wrap: nowrap;
+                white-space: nowrap;
             }
         } 
         .wedget-single-line2{
@@ -45,8 +52,35 @@
                 border-bottom: 1px solid $gray1;
                 font-size: 15px;
             }
-            p:nth-child(2){
+            .wedjet-users,
+            .wedjet-orders,
+            .wedjet-earnings,
+            .wedjet-details{
+                border-radius: 10px;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
             }
+            
+            .wedjet-users{
+                background-color: rgba(255, 0, 0, 0.2);
+                color: crimson
+            };
+            .wedjet-orders{
+                background-color: rgba(218, 165, 32, 0.2);
+                color: goldenrod
+            };
+            .wedjet-earnings{
+                background-color: rgba(0, 128, 0, 0.2);
+                color:green
+            };
+            .wedjet-details{
+                background-color: rgba(128, 0, 128, 0.2);
+                color: purple
+            }
+            
         } 
     }
 }

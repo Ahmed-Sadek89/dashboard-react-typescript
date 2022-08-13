@@ -4,6 +4,7 @@ const Home = () => {
   return (
     <>
       <Wedgets />
+      {/* complete the UI */}
     </>
   )
 }
