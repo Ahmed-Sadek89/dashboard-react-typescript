@@ -1,0 +1,52 @@
+.wedgets{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    .widget-single{
+        flex: 1;
+        box-shadow: 1px 4px 12px -2px rgba(221,221,221,0.63);
+        border-radius: 20px;
+        padding: 20px;
+        .wedget-single-line1,.wedget-single-line3{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .wedget-single-line1{
+            p:nth-child(1){
+                color: $gray1;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            p:nth-child(2){
+                color: green;
+                font-style: 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+        } 
+        .wedget-single-line2{
+            margin: 10px 0px;
+            h3{
+                font-size: 30px;
+                font-weight: 300; 
+            }
+        }
+        .wedget-single-line3{
+            p:nth-child(1){
+                cursor: pointer;
+                border-bottom: 1px solid $gray1;
+                font-size: 15px;
+            }
+            p:nth-child(2){
+            }
+        } 
+    }
+}
