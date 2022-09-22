@@ -1,0 +1,29 @@
+.table{
+    &-product{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+    &-status{
+        &-approved, &-pending{
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        &-approved{
+            background-color: $green;
+            color: green;
+        }
+        &-pending{
+            background-color: $yellow;
+            color: #daa520;
+        }
+    }
+}

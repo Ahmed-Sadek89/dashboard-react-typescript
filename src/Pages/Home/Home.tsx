@@ -1,16 +1,20 @@
 // components
 import Charts from '../../Components/Charts/Charts'
 import Features from '../../Components/Features/Features'
+import HomeTable from '../../Components/HomeTable/HomeTable'
 import Wedgets from '../../Components/Wedgets/Wedgets'
 
 const Home = () => {
   return (
     <>
       <Wedgets />
-      {/* complete the UI */}
       <div className="featuresAndCharts">
         <Features />
-        <Charts title="Last 6 Months (Revenue)" aspect={2 / 1} />
+        <Charts/>
+      </div>
+      <div className='home-table'>
+        <h1>last transaction</h1>
+        <HomeTable />
       </div>
     </>
   )

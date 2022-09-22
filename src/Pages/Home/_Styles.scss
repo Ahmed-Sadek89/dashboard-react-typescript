@@ -18,3 +18,23 @@
         height: 85vh;
     }
 }
+.home-table{
+    box-shadow: 1px 4px 12px -2px rgb(221 221 221 / 63%);
+    border-radius: 20px;
+    padding: 20px;
+    overflow-x: scroll;
+    @include xs{
+        width: 85vw; 
+    }
+    @include md{
+        width: 71vw;
+    }
+    @include lg{
+        width: 100%;
+    }
+    h1{
+        color: $gray1;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+}

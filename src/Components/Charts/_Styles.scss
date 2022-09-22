@@ -1,8 +1,8 @@
 .charts{
     flex: 2;
-    &-display{
-        width: 100vw;
-        overflow-x: scroll;
+    &-title{
+        color: $gray1;
+        margin-bottom: 10px ;
     }
     &-grid{
         stroke: rgb(228, 225, 225);
