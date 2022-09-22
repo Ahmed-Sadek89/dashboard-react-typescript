@@ -1,13 +1,15 @@
-import React from 'react';
-import Sidebar from './Components/Sidebar/Sidebar';
-import Navbar from './Components/Navbar/Navbar';
-import SADEK from './Components/SADEK/SADEK';
+// required
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// pages
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import List from './Pages/List/List';
 import Single from './Pages/Single/Single';
 import New from './Pages/New/New';
+// components
+import Sidebar from './Components/Sidebar/Sidebar';
+import Navbar from './Components/Navbar/Navbar';
+import SADEK from './Components/SADEK/SADEK';
 
 
 const App = () => {

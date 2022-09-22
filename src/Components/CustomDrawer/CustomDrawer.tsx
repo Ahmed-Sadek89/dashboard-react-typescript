@@ -1,14 +1,15 @@
+// required
 import React, { useState } from 'react';
+import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
+// components
 import Sidebar from '../Sidebar/Sidebar';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
 
 const CustomDrawer = () =>  {
   const [state, setState] = useState<boolean>(false)
 
-  const toggleDrawer =
-    (open: boolean) =>
+  const toggleDrawer =(open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
         event.type === 'keydown' &&

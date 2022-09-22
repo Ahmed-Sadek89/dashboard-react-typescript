@@ -1,7 +1,5 @@
-import React from 'react'
+// components
 import SliderPart2 from './SliderPart2'
-
-
 
 const Sidebar = () => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react'
+// required
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import StoreIcon from '@mui/icons-material/Store';
@@ -14,7 +14,6 @@ const SliderPart2 = () => {
   return (
     <div className="slider-content-part2 container">
         <ul>
-
             <li>
                 <p>main</p>
                 <ul>
@@ -24,7 +23,6 @@ const SliderPart2 = () => {
                     </li>
                 </ul>
             </li>
-
             <li>
                 <p>latest</p>
                 <ul>

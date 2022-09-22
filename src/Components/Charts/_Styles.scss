@@ -1,0 +1,10 @@
+.charts{
+    flex: 2;
+    &-display{
+        width: 100vw;
+        overflow-x: scroll;
+    }
+    &-grid{
+        stroke: rgb(228, 225, 225);
+    }
+}
