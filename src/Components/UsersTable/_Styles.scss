@@ -1,0 +1,55 @@
+.users-data{
+    height: 600px;
+    width: 100%;
+    &-user{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        img{
+            object-fit: cover;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &-status{
+        &-active,
+        &-pending, 
+        &-passive{
+            padding: 10px;
+            border-radius: 10px;
+        }
+        &-active{
+            background-color: $green;
+            color: green;
+        }
+        &-pending{
+            background-color: $yellow;
+            color: #daa520;
+        }
+        &-passive{
+            background-color: rgba(255,0,0,.2);
+            color: $red;
+        }
+    }
+    &-action{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        &-view, &-delete{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: inherit;
+        }
+        &-view{
+            color: $purple;
+            border: 1px solid $purple; 
+        }
+        &-delete{
+            color: $red;
+            border: 1px solid $red; 
+        }
+    }
+}

@@ -10,7 +10,7 @@ const Home = () => {
       <Wedgets />
       <div className="featuresAndCharts">
         <Features />
-        <Charts/>
+        <Charts height={540}/>
       </div>
       <div className='home-table'>
         <h1>last transaction</h1>

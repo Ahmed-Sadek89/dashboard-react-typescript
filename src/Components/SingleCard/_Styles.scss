@@ -1,0 +1,64 @@
+.single-card{
+    position: relative;
+    &-logo{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background: $gray2;
+        color: $purple;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        cursor: pointer;
+        padding: 5px;
+    }
+    h4{
+        color: $gray1;
+        margin-bottom: 20px;
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        
+        img{
+            object-fit: cover;
+            flex: 1;
+            @include xs{
+                width: 100%;
+                border-radius: 20px;
+                height: 100%;
+            }
+            @include lg{
+                width: 100px;
+                border-radius: 50%;
+                height: 100px;
+            }
+        }
+        &-info{
+            flex: 2;
+            word-break: break-all;
+            h1, div{
+                margin-bottom: 10px;
+            }
+            h1{
+                color: $gray1;
+                margin-bottom: 20px;
+            }
+            div{
+                span{
+                    margin-right: 5px;
+                    
+                }
+                span{
+                    &:nth-child(1){
+                        font-weight: bold;
+                    }  
+                    &:nth-child(2){
+                        color: $gray1;
+                    }  
+                }
+                
+            }
+        }
+    }
+}

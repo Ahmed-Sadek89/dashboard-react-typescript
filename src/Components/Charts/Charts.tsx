@@ -16,13 +16,16 @@ const data = [
   { name: "June", Total: 1700 }
 ];
 
-const Charts = () =>  {
+type chartProps = {
+  height: number
+}
+const Charts = ({height}: chartProps) =>  {
   return (
     <div className="charts">
       <div className="charts-title">
         Last 6 Months (Revenue)
       </div>
-      <ResponsiveContainer width="95%" height={540}>
+      <ResponsiveContainer width="95%" height={height}>
         <AreaChart
           width={730}
           height={250}

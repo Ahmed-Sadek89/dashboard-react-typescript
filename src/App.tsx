@@ -1,5 +1,5 @@
 // required
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // pages
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -22,19 +22,17 @@ const App = () => {
       <div className='App-part2'>
         <Navbar />
         <div className="allRoutes container">
-          <BrowserRouter>
-            <Routes>
-              <Route path='/'>
-                <Route index element={<Home />} /> {/* '/' */}
-                <Route path='login' element={<Login />} /> {/* '/login'*/}
-                <Route path='users' >
-                  <Route index element={<List />} />  {/*'/users'*/}
-                  <Route path=':userId' element={<Single />} /> {/*'/users/:id'*/}
-                  <Route path='new' element={<New />} /> {/*'/users/new'*/}
-                </Route>
+          <Routes>
+            <Route path='/'>
+              <Route index element={<Home />} /> {/* '/' */}
+              <Route path='login' element={<Login />} /> {/* '/login'*/}
+              <Route path='users' >
+                <Route index element={<List />} />  {/*'/users'*/}
+                <Route path=':userId' element={<Single />} /> {/*'/users/:id'*/}
+                <Route path='new' element={<New />} /> {/*'/users/new'*/}
               </Route>
-            </Routes>
-          </BrowserRouter>
+            </Route>
+          </Routes>
         </div>
         <SADEK />
       </div>

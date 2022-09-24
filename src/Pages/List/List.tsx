@@ -1,6 +1,11 @@
+// components
+import UsersTable from "../../Components/UsersTable/UsersTable"
+
 const List = () => {
   return (
-    <div>List</div>
+    <div>
+      <UsersTable />
+    </div>
   )
 }
 
