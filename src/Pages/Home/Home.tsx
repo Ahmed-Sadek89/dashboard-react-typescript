@@ -6,7 +6,7 @@ import Wedgets from '../../Components/Wedgets/Wedgets'
 
 const Home = () => {
   return (
-    <>
+    <div className="home">
       <Wedgets />
       <div className="featuresAndCharts">
         <Features />
@@ -16,7 +16,7 @@ const Home = () => {
         <h1>last transaction</h1>
         <HomeTable />
       </div>
-    </>
+    </div>
   )
 }
 

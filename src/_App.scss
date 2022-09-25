@@ -1,6 +1,7 @@
 .App{
     display: flex;
     flex-direction: row;
+    background-color: $white;
     .App-part1{
         @include xs{
             position: relative;
@@ -16,7 +17,7 @@
         background-color: $white;
     }
     .App-part2{
-        height: 100vh;
+        height: 100%;
         flex: 6;
         display: flex;
         flex-direction: column;

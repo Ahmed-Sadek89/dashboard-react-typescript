@@ -1,4 +1,12 @@
 .table{
+    &>*{
+        background-color: $white;
+    }
+    .table-color{
+        &>*{
+            color: $black;
+        }
+    }
     &-product{
         display: flex;
         flex-direction: row;

@@ -42,3 +42,19 @@ a{
     padding: 0 20px;
     margin: 0 auto;
 }
+::-webkit-scrollbar {
+    @include xs{
+      width: 0px;
+      height: 0px;
+    }
+    @include md{
+      width: 5px;
+      height: 5px;
+    }
+  }
+  
+    
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $black;
+  }

@@ -2,7 +2,7 @@
     .slider-content{
         display: flex;
         flex-direction: column;
-        .slider-content-part1{
+        &-part1{
             text-align: center;
             padding: 20px 0px;
             border-bottom: 1px solid $gray2;
@@ -13,7 +13,7 @@
             cursor: pointer;
             margin-bottom: 20px;
         }
-        .slider-content-part2{
+        &-part2{
             &>ul{
                 p{
                     color: $gray1;
@@ -44,6 +44,24 @@
                     }
                 }
             }
+        }
+        &-part3{
+            p{
+                margin-bottom: 10px;
+            }
+            span{
+                border: 1px solid $purple;
+                padding: 5px 15px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            :nth-child(2){
+                background-color: $white;
+                margin-right: 10px;
+            }
+           :nth-child(3){
+                background-color: $black;
+           }
         }
     }
 }

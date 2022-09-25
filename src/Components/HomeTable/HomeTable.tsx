@@ -15,7 +15,7 @@ const HomeTable = () => {
     <TableContainer component={Paper} className='table'>
       <Table>
         <TableHead>
-          <TableRow>
+          <TableRow className="table-color">
             <TableCell>Tracking ID</TableCell>
             <TableCell align="left">product</TableCell>
             <TableCell align="left">customer</TableCell>
@@ -30,6 +30,7 @@ const HomeTable = () => {
             <TableRow
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              className="table-color"
             >
               <TableCell component="th" scope="row">
                 #{row.id}

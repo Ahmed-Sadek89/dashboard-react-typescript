@@ -1,6 +1,11 @@
 .users-data{
     height: 600px;
     width: 100%;
+    &>*{
+        &>*{
+            color: $black;
+        }
+    }
     &-user{
         display: flex;
         flex-direction: row;

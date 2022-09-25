@@ -8,6 +8,7 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const CustomDrawer = () =>  {
   const [state, setState] = useState<boolean>(false)
+  const [ isDark, setIsDark ] = useState<'light' | 'dark'>('light')
 
   const toggleDrawer =(open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -37,7 +38,7 @@ const CustomDrawer = () =>  {
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <Sidebar />
+          <Sidebar setIsDark={setIsDark}/>
         </Box>
       </Drawer>
     </div>

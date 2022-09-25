@@ -2,6 +2,7 @@
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import { Dispatch } from 'react';
 // import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
@@ -10,7 +11,10 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 // components
 import CustomDrawer from '../CustomDrawer/CustomDrawer';
 
-const Navbar = () => {
+type navbarType = {
+  setIsDark: Dispatch<React.SetStateAction<"light" | "dark">> 
+}
+const Navbar = ( { setIsDark }: navbarType ) => {
   return (
     <div className='navbar'>
       <div className="container navbar-content">
@@ -27,15 +31,19 @@ const Navbar = () => {
               <span>English</span>
             </div>
             
-            <DarkModeOutlinedIcon className='navbar-icon'/>
+            <DarkModeOutlinedIcon className='navbar-icon' onClick={() => { //dark 
+              setIsDark('dark')
+            }} />
             {/* <WbSunnyOutlinedIcon className='navbar-icon'/> */}
-            <FullscreenExitOutlinedIcon className='navbar-icon'/>
+            <FullscreenExitOutlinedIcon className='navbar-icon' onClick={() => { //light 
+              setIsDark('light')
+            }}/>
             <div className="websoket">
-              <NotificationsNoneOutlinedIcon />
+              <NotificationsNoneOutlinedIcon className='icon'/>
               <span>1</span>
             </div>
             <div className="websoket">
-              <ChatBubbleOutlineOutlinedIcon />
+              <ChatBubbleOutlineOutlinedIcon  className='icon'/>
               <span>2</span>
             </div>
             {/* <FormatListBulletedOutlinedIcon className='navbar-icon'/> */}

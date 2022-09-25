@@ -1,8 +1,9 @@
 // general
-@import './base';
 @import './variables';
 @import './media';
+@import './base';
 @import '../../App';
+@import '../../Dark';
 
 // components
 @import '../../Components/Sidebar/Styles';
@@ -22,3 +23,4 @@
 @import '../../Pages/List/Styles';
 @import '../../Pages/Single/Styles';
 @import '../../Pages/New/Styles';
+

@@ -6,6 +6,7 @@
     align-items: center;
     gap: 20px;
     .widget-single{
+        background-color: $white;
         @include xs{
             flex: auto
         }

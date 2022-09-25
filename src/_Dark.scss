@@ -1,0 +1,249 @@
+::-webkit-scrollbar {
+    @include xs{
+      width: 0px;
+      height: 0px;
+    }
+    @include md{
+      width: 5px;
+      height: 5px;
+    }
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $gray3;
+}
+.dark{
+    .App{
+        background-color: $black;
+    }
+    // side containing sidebar
+    .App-part1{
+        border-right: 2px solid $white;
+        background-color: $black;
+        color: $white;
+        .slider-content{
+            .slider-content-part1{
+                border-bottom: 1px solid $gray2;
+                color: $white;
+            }
+            .slider-content-part2{
+                &>ul{
+                    p{
+                        color: $white;
+                    }
+                    .slider-icon{
+                        color: $white;
+                    }
+                    li{
+                        ul{
+                            li{
+                                span{
+                                    color: $offWhite;
+                                    &:hover{
+                                    color: $gray1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // other side containing the rest
+    .App-part2{
+        .allRoutes{
+            background-color: $black;
+            margin: 0px;
+            padding: 20px;
+        }
+    }
+    // navbar
+    .navbar{
+        border-bottom: 1px solid $white;
+        color: $gray3;
+        background-color: $black;
+        
+        .navbar-content{
+            .navbar-part1{
+                input{
+                    border: 1px solid $offWhite;
+                    background-color: $black;
+                    color: $white;
+                }
+                .navbar-part1-searchIcon{
+                    color: $offWhite;
+                }
+            }
+            .navbar-part2{
+                .navbar-lang{
+                    color: $offWhite;
+                }
+                .navbar-icon{
+                    cursor: pointer;
+                    color: $offWhite;
+                }
+                .websoket{
+                    .icon{
+                        color: $offWhite;
+                    }
+                }
+            }
+        }
+    }
+
+    // sadek
+    .sadek{
+        background-color: $black;
+        border-top: 1px solid $offWhite;
+        color: $white;
+    }
+
+    // home table
+    .home-table{
+        h1{
+            color: $white;
+        }
+    }
+    .table{
+        &>*{
+            background-color: $black;
+            color: $white;
+        }
+        .table-color{
+            &>*{
+                color: $white;
+            }
+        }
+        color: $white;
+    }
+    // charts
+    .charts{
+        &-title{
+            color: $white;
+        }
+    }
+    // home and its components
+    .home{
+        .features, .charts{
+            box-shadow: 1px 4px 12px -2px rgba(249, 249, 249, 0.63);
+        }
+        // wedgets
+        .wedgets{
+            .widget-single{
+                box-shadow: 1px 4px 12px -2px $offWhite;
+                background-color: $black;
+                color: $offWhite;
+                .wedget-single-line1{
+                    p:nth-child(1){
+                        color: $offWhite;
+                    }
+                } 
+                .wedget-single-line3{
+                    p:nth-child(1){
+                        border-bottom: 1px solid $offWhite;
+                    }
+                } 
+            }
+        }
+
+        // features
+        .features{
+            background-color: $black;
+            color: $white;
+            &-top{
+                color: $white;
+            }
+            &-middle{
+                h2, p{
+                    color: $gray2
+                }
+            }
+            &-bottom{
+                color: $white;
+            }
+        }
+        // charts
+    }
+
+    // users and products page and its components
+    // data grid
+    .users-data{
+        background-color: $black2;
+        color: $offWhite;
+        &>*{
+            &>*{
+                color: $white;
+            }
+        }
+    }
+    .addNew{
+        h5{
+            color: $offWhite;
+        }
+        button{
+            color: $offWhite;
+            border: 1px solid $offWhite;
+        }
+    }
+
+    // user or product  => add new
+    .new{
+        &-title{
+           color: $offWhite;
+        }
+        &-content{
+            color: $white;
+           &-form{
+            form{
+                .form-control{
+                    input{
+                        background-color: $black;
+                        border-bottom: 1px solid $offWhite;
+                        padding: 10px 5px;
+                        color: $white;
+                    }
+                }
+    
+            }
+            &-submit{
+                margin: 20px 0px;
+                display: flex;
+                justify-content: center;
+               
+                button{
+                    background-color: teal;
+                    width: 25%;
+                    text-transform: capitalize;
+                    padding: 20px 10px;
+                    color: $white
+                }
+            }
+           }
+        }
+    }
+
+    // user or product => single :id
+    .single-card{
+       
+        h4{
+            color: $offWhite;
+        }
+        &-content{
+            &-info{
+                h1{
+                    color: $white;
+                }
+                div{
+                    span{
+                        &:nth-child(1){
+                            color: $offWhite;
+                        }  
+                    }
+                }
+            }
+        }
+    }
+    
+}
