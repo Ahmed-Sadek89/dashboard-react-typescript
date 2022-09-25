@@ -8,7 +8,7 @@ const Single = () => {
     <>
       <div className='single'>
         <SingleCard />
-        <Charts height={240}/>
+        <Charts height={440}/>
       </div>
       <div className='single-user-table'>
         <h1>last transaction</h1>

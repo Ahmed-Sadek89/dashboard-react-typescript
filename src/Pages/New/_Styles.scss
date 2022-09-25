@@ -1,0 +1,85 @@
+.new{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    &-title, &-content{
+        box-shadow: 1px 4px 12px -2px rgb(221 221 221 / 63%);
+        border-radius: 20px;
+        padding: 20px;
+    }
+    &-title{
+       font-weight: normal;
+       font-size: 20px;
+       color: $gray1;
+    }
+    &-content{
+       display: flex;
+       gap: 20px;
+       @include xs{
+        flex-direction: column;
+       }
+       @include md{
+        flex-direction: row;
+       }
+       &-img{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+       }
+       &-form{
+        flex: 2;
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-around;
+            .form-control{
+                @include xs{
+                    width: 100%;
+                }
+                @include md{
+                    width: 40%;
+                }
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: flex-start;
+                label{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .icon{
+                        cursor: pointer;
+                    }
+                }
+                input{
+                    border-bottom: 1px solid $gray1;
+                    padding: 10px 5px;
+                    color: $gray1;
+                }
+            }
+
+        }
+        &-submit{
+            margin: 20px 0px;
+            display: flex;
+            justify-content: center;
+           
+            button{
+                background-color: teal;
+                width: 25%;
+                text-transform: capitalize;
+                padding: 20px 10px;
+                color: $white
+            }
+        }
+       }
+    }
+}

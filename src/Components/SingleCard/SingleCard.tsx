@@ -12,22 +12,16 @@ const SingleCard = () => {
         <div className="single-card-content-info">
           <h1>Jane Doe</h1>
           <div>
-            <span>Email:</span>
-            <span>janedoe@gmail.com</span>
+            <span>Email:</span><span>janedoe@gmail.com</span>
           </div>
           <div>
-            <span>Phone:</span>
-            <span>+1 2345 67 89</span>
+            <span>Phone:</span><span>+1 2345 67 89</span>
           </div>
           <div>
-            <span>Address:</span>
-            <span>
-              Elton St. 234 Garden Yd. NewYork
-            </span>
+            <span>Address:</span><span>Elton St. 234 Garden Yd. NewYork</span>
           </div>
           <div>
-            <span>Country:</span>
-            <span>USA</span>
+            <span>Country:</span><span>USA</span>
           </div>
         </div>
       </div>

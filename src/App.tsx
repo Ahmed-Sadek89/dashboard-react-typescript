@@ -10,6 +10,7 @@ import New from './Pages/New/New';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Navbar from './Components/Navbar/Navbar';
 import SADEK from './Components/SADEK/SADEK';
+import { productInputs, userInputs } from './DataFormNew';
 
 
 const App = () => {
@@ -29,8 +30,19 @@ const App = () => {
               <Route path='users' >
                 <Route index element={<List />} />  {/*'/users'*/}
                 <Route path=':userId' element={<Single />} /> {/*'/users/:id'*/}
-                <Route path='new' element={<New />} /> {/*'/users/new'*/}
+                <Route
+                  path='new' 
+                  element={<New routeName={'User'} formElements={userInputs} />}
+                /> {/*'/users/new'*/}
               </Route>
+              <Route path="products">
+              <Route index element={<List />} />  {/*'/products'*/}
+              <Route path=":productId" element={<Single />} /> {/*'/products/:id'*/}
+              <Route
+                path="new"
+                element={<New routeName={'Product'} formElements={productInputs} />}
+              /> {/*'/products/new'*/}
+            </Route>
             </Route>
           </Routes>
         </div>

@@ -32,7 +32,7 @@ const SliderPart2 = () => {
                             <PersonOutlineOutlinedIcon className='slider-icon' />
                             <span>users</span>
                         </li>
-                        <li>
+                        <li onClick={() => navigate('products')}>
                             <StoreIcon className='slider-icon' />
                             <span>products</span>
                         </li>

@@ -7,11 +7,13 @@ import {
 } from '@mui/x-data-grid';
 import { useNavigate } from 'react-router-dom';
 // includes
-import { columns, userRows } from './DataTable';
+import { columns, userRows } from './DataRowAndCol';
 import {rowUsers} from '../../Types/rowUsers';
 
-
-const UsersTable = () => {
+type dataTableTypes = {
+  pathName: string
+}
+const DataTable = ( { pathName }: dataTableTypes) => {
     const navigate = useNavigate();
     const [ filterdData, setFilterdData ] = useState<rowUsers[]>(userRows)
     const actionColumn: GridColDef[] = [
@@ -22,7 +24,7 @@ const UsersTable = () => {
               <div className="users-data-action">
                 <button
                   className="users-data-action-view" 
-                  onClick={() => navigate(`/users/${params.row.id}`)}
+                  onClick={() => navigate(`/${pathName}/${params.row.id}`)}
                 >
                   view
                 </button>
@@ -57,4 +59,4 @@ const UsersTable = () => {
     );
 }
 
-export default UsersTable 
+export default DataTable 
