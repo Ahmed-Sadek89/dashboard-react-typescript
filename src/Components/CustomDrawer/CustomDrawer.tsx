@@ -6,9 +6,12 @@ import Drawer from '@mui/material/Drawer';
 // components
 import Sidebar from '../Sidebar/Sidebar';
 
-const CustomDrawer = () =>  {
+type drawerType = {
+  isDark: string | null 
+  setIsDark: React.Dispatch<React.SetStateAction<string | null>> 
+}
+const CustomDrawer = ( { isDark, setIsDark }: drawerType) =>  {
   const [state, setState] = useState<boolean>(false)
-  const [ isDark, setIsDark ] = useState<'light' | 'dark'>('light')
 
   const toggleDrawer =(open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -21,11 +24,13 @@ const CustomDrawer = () =>  {
       }
       setState(open);
     };
-
+    console.log('isDark => ', isDark);
   return (
     <div className='drawer'>
       <button onClick={toggleDrawer(true)}>
-        <FormatListBulletedOutlinedIcon/>
+        <FormatListBulletedOutlinedIcon sx={{
+            'color': `${isDark === 'light' ? "#111": '#fff'}`,
+          }}/>
       </button>
       <Drawer
         anchor={'left'}
@@ -33,10 +38,13 @@ const CustomDrawer = () =>  {
         onClose={toggleDrawer(false)}
       >
         <Box
-          sx={{ width: 190 }}
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
+          className="drawer-box"
+          sx={{
+            'backgroundColor': `${isDark === 'light' ? "#fff": '#111'}`,
+          }}
         >
           <Sidebar setIsDark={setIsDark}/>
         </Box>

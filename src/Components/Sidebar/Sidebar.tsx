@@ -1,11 +1,10 @@
 // required
-import { Dispatch } from 'react'
 import { useNavigate } from 'react-router-dom'
 // components
 import SliderPart2 from './SliderPart2'
 
 type sidebarType = {
-  setIsDark: Dispatch<React.SetStateAction<"light" | "dark">> 
+  setIsDark: React.Dispatch<React.SetStateAction<string | null>>
 }
 const Sidebar = ({ setIsDark }: sidebarType ) => {
   const navigate = useNavigate()
@@ -23,9 +22,11 @@ const Sidebar = ({ setIsDark }: sidebarType ) => {
           <p>theme</p>
           <span onClick={() => { //light
             setIsDark('light')
+            localStorage.setItem('isDark', 'light')
           }}></span>
-          <span onClick={() => { //light 
+          <span onClick={() => { // dark 
             setIsDark('dark')
+            localStorage.setItem('isDark', 'dark')
           }}></span>
         </div>
       </div>

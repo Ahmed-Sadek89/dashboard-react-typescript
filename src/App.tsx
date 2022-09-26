@@ -1,6 +1,6 @@
 // required
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react'; 
+import { useContext } from 'react'; 
 // pages
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -12,19 +12,21 @@ import Sidebar from './Components/Sidebar/Sidebar';
 import Navbar from './Components/Navbar/Navbar';
 import SADEK from './Components/SADEK/SADEK';
 import { productInputs, userInputs } from './DataFormNew';
+import {  DarkContext } from './Context/DarkContext';
 
 
 const App = () => {
-  const [ isDark, setIsDark ] = useState<'light' | 'dark'>('light')
+  const { isDark, setIsDark } = useContext(DarkContext);
+
   return (
-    <div className={isDark === 'light' ? '' : 'dark'}>
+    <div className={(localStorage.getItem('isDark')) === 'dark' ? 'dark' : ''}>
       <div className="App">
         <div className="App-part1">
           <Sidebar setIsDark={setIsDark} /> 
         </div>
         
         <div className='App-part2'>
-          <Navbar setIsDark={setIsDark} />
+          <Navbar setIsDark={setIsDark} isDark={isDark}/>
           <div className="allRoutes container">
             <Routes>
               <Route path='/'>
@@ -53,6 +55,7 @@ const App = () => {
         </div>
       </div>
     </div>
+    
   );
 }
 

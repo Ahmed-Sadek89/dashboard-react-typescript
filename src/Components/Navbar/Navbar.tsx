@@ -2,7 +2,6 @@
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import { Dispatch } from 'react';
 // import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
@@ -12,9 +11,11 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import CustomDrawer from '../CustomDrawer/CustomDrawer';
 
 type navbarType = {
-  setIsDark: Dispatch<React.SetStateAction<"light" | "dark">> 
+  isDark: string | null 
+  setIsDark: React.Dispatch<React.SetStateAction<string | null>> 
 }
-const Navbar = ( { setIsDark }: navbarType ) => {
+const Navbar = ( { isDark, setIsDark }: navbarType ) => {
+
   return (
     <div className='navbar'>
       <div className="container navbar-content">
@@ -22,7 +23,9 @@ const Navbar = ( { setIsDark }: navbarType ) => {
             <input type="text" placeholder='Search...' />
             <SearchOutlinedIcon className='navbar-part1-searchIcon' />
           </div>
-          <CustomDrawer />
+          <div className='sadekk'>
+          <CustomDrawer isDark={isDark} setIsDark={setIsDark}/>
+          </div>
 
           <div className="navbar-part2">
             
@@ -32,10 +35,12 @@ const Navbar = ( { setIsDark }: navbarType ) => {
             </div>
             
             <DarkModeOutlinedIcon className='navbar-icon' onClick={() => { //dark 
+              localStorage.setItem('isDark', 'dark')
               setIsDark('dark')
             }} />
             {/* <WbSunnyOutlinedIcon className='navbar-icon'/> */}
             <FullscreenExitOutlinedIcon className='navbar-icon' onClick={() => { //light 
+              localStorage.setItem('isDark', 'light')
               setIsDark('light')
             }}/>
             <div className="websoket">

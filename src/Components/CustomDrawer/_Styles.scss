@@ -5,6 +5,10 @@
     @include md{
         display: none;
     }
+    &-box{
+        width: 190px;
+        height: 100vh
+    }
     button{
         display: flex;
         background-color: inherit;
